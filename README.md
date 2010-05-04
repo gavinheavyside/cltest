@@ -1,4 +1,4 @@
-CLTest
+cltest
 ======
 
 This application is is a minimal
@@ -6,21 +6,17 @@ This application is is a minimal
 words in a text file.  It was written to confirm that I could run
 cascalog jobs on a real Hadoop cluster.
 
-
 Installing and running
 ======================
-
 Prerequisites
 -------------
-
 1. install [leiningen](http://github.com/technomancy/leiningen)
 1. download and compile cascalog according to the instructions [in the
 readme](http://github.com/nathanmarz/cascalog)
 1. install cascalog locally using `lein install`
 
-CLTest
-------
-
+Building cltest
+---------------
 1. `git clone http://github.com/hgavin/cltest.git`
 1. `cd cltest`
 1. `lein deps && lein uberjar`
