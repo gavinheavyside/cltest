@@ -17,25 +17,25 @@ readme](http://github.com/nathanmarz/cascalog)
 
 Building cltest
 ---------------
-    `git clone http://github.com/hgavin/cltest.git`
-    `cd cltest`
-    `lein deps`
-    `lein uberjar`
+    git clone http://github.com/hgavin/cltest.git
+    cd cltest
+    lein deps
+    lein uberjar
 
 Running cltest
 ---------------
 Create some test input data
 
-    `hadoop fs -mkdir cltest_in`
-    `hadoop fs -put README.md cltest_in`
+    hadoop fs -mkdir cltest_in
+    hadoop fs -put README.md cltest_in
 
 Run cltest specifying input dir/file and output dir
 
-    `hadoop jar cltest-standalone.jar cltest_in cltest_out`
+    hadoop jar cltest-standalone.jar cltest_in cltest_out
 
 View the output
 
-    `hadoop fs -cat cltest_out/part*`
+    hadoop fs -cat cltest_out/part*
 
 
 License
