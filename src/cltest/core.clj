@@ -6,8 +6,10 @@
 
 (w/defmapcatop split [sentence]
    (seq (.split sentence "\\s+")))
-   
+
+(defn count-words [src dest]
+  (let [source (hfs-textline src)] 
+    (?<- (hfs-textline dest) [?w ?c] (source ?s) (split ?s :> ?w) (c/count ?c))))
+
 (defn -main [src dest]
-   (let [source (hfs-textline src)] 
-   (?<- (hfs-textline dest) [?w ?c] (source ?s) (split ?s :> ?w) (c/count ?c)))
-)
+  (count-words src dest))
